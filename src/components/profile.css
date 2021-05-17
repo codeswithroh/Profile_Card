@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height:100vh;
+    background-color: hsl(185, 75%, 39%);
+    overflow: hidden;
+    background-image: url('../assets/images/bg-pattern-top.svg'),url('../assets/images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position:top -10vh left -14vmin, bottom -50vh right -10vmin;
+    background-size: contain, contain;
+}
+
+.show {
+    animation: show 1s linear forwards;
+}
+
+#profile__card {
+    width:25em;
+    height:24em;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    clip-path: circle(54px at 50.00% 32.71%);
+}
+
+.profile__card__header {
+    height:8em;
+    width: 25em;
+    border-radius:20px 20px 0 0;
+    position:relative;
+    background:url('../assets/images/bg-pattern-card.svg');
+}
+
+.profile__card__header img {
+    border-radius:50%;
+    border:6px solid white;
+    position: absolute;
+    top:4.5em;
+    right:0;
+    left:0;
+    margin:auto;
+}
+
+.profile__card__name {
+    height:10em;
+    width:25em;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.671);
+    text-align: center;
+}
+
+.name {
+    padding-top:4em;
+    opacity: 0;
+}
+
+#slide {
+    animation: slideIn 1s linear forwards 1s;
+}
+
+#slideOpp {
+    animation: slideOpp 1s linear forwards 1.5s;
+}
+
+.profile__card__stats {
+    width:25em;
+    height:6em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+}
+
+@media screen and (max-width:450px) {
+    body {
+        background-position:top -10vh left -14vmin, bottom -20vh right -10vmin;
+    }
+    .profile__card {
+        width:20em;
+    }
+
+    .profile__card__header {
+        width:20em;
+    }
+
+    .profile__card__name {
+        width:20em;
+    }
+
+    .profile__card__stats {
+        width:20em;
+    }
+}
+
+@keyframes show {
+    0% {
+        clip-path: circle(54px at 50.00% 32.71%);
+    }
+    25% {
+        clip-path: circle(94px at 50.00% 32.71%);
+    }
+    50% {
+        clip-path: circle(124px at 50.00% 32.71%);
+    }
+    75% {
+        clip-path: circle(184px at 50.00% 32.71%);
+    }
+    90% {
+        clip-path: circle(224px at 50.00% 32.71%);
+    }
+    100% {
+        clip-path: circle(324px at 50.00% 32.71%);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-18.5em);
+        opacity: 0;
+    }
+    25% {
+        transform: translateX(-14.5em);
+        opacity: 0.25;
+    }
+    50% {
+        transform: translateX(-10.5em);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translateX(-6.5em);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideOpp {
+    0% {
+        transform: translateX(18.5em);
+        opacity: 0;
+    }
+    25% {
+        transform: translateX(14.5em);
+        opacity: 0.25;
+    }
+    50% {
+        transform: translateX(10.5em);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translateX(6.5em);
+        opacity: 0.75;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

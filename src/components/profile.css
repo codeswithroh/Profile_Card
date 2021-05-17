@@ -81,7 +81,7 @@ body {
     body {
         background-position:top -10vh left -14vmin, bottom -20vh right -10vmin;
     }
-    .profile__card {
+    #profile__card {
         width:20em;
     }
 

@@ -6,7 +6,7 @@
 ![](./src/assets/images/ss.png)
 
 ## Link
-### [Link to the website](https://your-live-site-url.com)
+### [Link to the website](https://animated-profile-card.netlify.app/)
 
 ## Author
 

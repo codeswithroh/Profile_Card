@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import './profile.css';
 import profile from '../assets/images/image-victor.jpg';
 
